@@ -6,6 +6,8 @@ class MoviesController < ApplicationController
   def index
     @movies = Movie.all
     @data=Movie.group(:genre).count
+    @search=Movie.search(params[:q])
+    @movies=@search.result
   end
 
   # GET /movies/1
