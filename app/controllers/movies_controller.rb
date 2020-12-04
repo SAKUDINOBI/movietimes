@@ -5,6 +5,7 @@ class MoviesController < ApplicationController
   # GET /movies.json
   def index
     @movies = Movie.all
+    @data=Movie.group(:genre).count
   end
 
   # GET /movies/1
