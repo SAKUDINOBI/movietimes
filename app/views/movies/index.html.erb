@@ -9,9 +9,15 @@ do not forget to subscribe </p>
 <h3>Search the movies database</h3>
 
 <%= search_form_for @search do |f| %>
-<%= f.label :genre %>
+<div>
+<div>
+<%= f.label :genre_cont, "Search by genre" %>
 <%= f.text_field :genre_cont, class: 'form-control' %>
+    <%= f.label :year_eq, "Search by year" %></div>
+<div><%= f.text_field :year_eq, class: 'form-control' %>
 <%= f.submit class: 'btn btn-primary' %>
+<%= link_to "Clear", request.path, class: 'btn btn-primary' %></div></div>
+
 <% end %>
 
 <table>
