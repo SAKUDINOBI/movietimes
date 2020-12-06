@@ -13,7 +13,9 @@
   <body>
       <div class="logo">
          
-       <%= image_tag("mslogo.png",  :alt =>"MovieStream logo" ) %></div>
+      <%= image_tag("mslogo.png",  :alt =>"MovieStream logo" ) %>
+      </div>    <%= link_to "Please find our packages", packages_path %> | 
+      <%= link_to "Find a Customer", customers_path %> |
     <%= yield %>
   </body>
 </html>
