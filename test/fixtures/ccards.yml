@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  card_issuer: MyString
+  card_number: 1
+  name_on_card: MyString
+  exp_date: MyString
+  customer: one
+
+two:
+  card_issuer: MyString
+  card_number: 1
+  name_on_card: MyString
+  exp_date: MyString
+  customer: two

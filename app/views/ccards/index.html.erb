@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ccards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Card issuer</th>
+      <th>Card number</th>
+      <th>Name on card</th>
+      <th>Exp date</th>
+      <th>Customer</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ccards.each do |ccard| %>
+      <tr>
+        <td><%= ccard.card_issuer %></td>
+        <td><%= ccard.card_number %></td>
+        <td><%= ccard.name_on_card %></td>
+        <td><%= ccard.exp_date %></td>
+        <td><%= ccard.customer_id %></td>
+        <td><%= link_to 'Show', ccard %></td>
+        <td><%= link_to 'Edit', edit_ccard_path(ccard) %></td>
+        <td><%= link_to 'Destroy', ccard, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ccard', new_ccard_path %>

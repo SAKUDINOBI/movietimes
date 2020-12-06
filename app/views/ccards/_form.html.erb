@@ -1,0 +1,42 @@
+<%= form_with(model: ccard, local: true) do |form| %>
+  <% if ccard.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ccard.errors.count, "error") %> prohibited this ccard from being saved:</h2>
+
+      <ul>
+        <% ccard.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :card_issuer %>
+    <%= form.text_field :card_issuer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :card_number %>
+    <%= form.number_field :card_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name_on_card %>
+    <%= form.text_field :name_on_card %>
+  </div>
+
+  <div class="field">
+    <%= form.label :exp_date %>
+    <%= form.text_field :exp_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :customer_id %>
+    <%= form.text_field :customer_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Card issuer:</strong>
+  <%= @ccard.card_issuer %>
+</p>
+
+<p>
+  <strong>Card number:</strong>
+  <%= @ccard.card_number %>
+</p>
+
+<p>
+  <strong>Name on card:</strong>
+  <%= @ccard.name_on_card %>
+</p>
+
+<p>
+  <strong>Exp date:</strong>
+  <%= @ccard.exp_date %>
+</p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @ccard.customer_id %>
+</p>
+
+<%= link_to 'Edit', edit_ccard_path(@ccard) %> |
+<%= link_to 'Back', ccards_path %>

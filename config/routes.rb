@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :ccards
+  resources :addresses
   resources :packages
   resources :customers
   resources :movies
