@@ -3,7 +3,7 @@
 <h2>Watch unlimited number of movies from anywhere</h2>
 <p>Movie Stream is a subscription based web application that focuses on streaming the best collection of movies from around the world using the IMDb dataset.
 It houses top rated movies from all over the world and across different genres. Feel free to move about, but most importantly,
-do not forget to subscribe </p>
+do not forget to <%= link_to "subscribe to one of our packages", packages_path %> </p>
 <br>
 <div style=width 500><%= bar_chart @data, colors: ["#666", "#666"], xtitle: "count of movies", ytitle: "Movie genres" %></div>
 <div><h3>Search the movies database</h3>

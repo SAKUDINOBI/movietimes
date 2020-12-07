@@ -16,6 +16,9 @@
       <%= image_tag("mslogo.png",  :alt =>"MovieStream logo" ) %>
       </div>    <%= link_to "Please find our packages", packages_path %> | 
       <%= link_to "Find a Customer", customers_path %> |
+      <%=link_to 'Log in', login_path %> |
+ <p><%=link_to 'Log out', logout_path %>
+</p>
     <%= yield %>
   </body>
 </html>
